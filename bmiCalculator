@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Main {
+    public static void main(String[] args) {
+        float weight, height, bmi;
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println(" Body Mass Index(BMI) Calculator");
+        System.out.println("What is your weight? ");
+        weight = scan.nextFloat();
+
+        System.out.println("What is your height? (m)");
+        height = scan.nextFloat();
+
+        bmi = Math.round(weight / (height * height));
+        System.out.println(bmi);
+
+        if (bmi < 18.5)
+            System.out.println("Underweight");
+        else  if (bmi >= 18.5 && bmi <= 24.9)
+            System.out.println("Normal");
+        else if(bmi > 24.9 && bmi <= 29.9)
+            System.out.println("Overweight");
+        else
+            System.out.println("Very Overweight");
+    }
+}
