@@ -1,0 +1,31 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+class Main {
+    public static void main(String[] args) {
+       String[] states = {"Acre", "Alagoas", "Amapa", "Amazonas", "Bahia", "Ceara", "Distrito Federal", "Espirito Santo", "Goias", "Maranhao", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Para", "Paraiba", "Parana", "Pernambuco", "Piaui", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondonia", "Roraima", "Santa Catarina", "Sao Paulo", "Sergipe", "Tocantins"};
+       
+       String[] capitals = {"Rio Branco", "Maceio", "Macapa", "Manaus", "Salvador", "Fortaleza", "Brasilia", "Vitoria", "Goiania", "Sao Luis", "Cuiaba", "Campo Grande", "Belo Horizonte", "Belem", "Joao Pessoa", "Curitiba", "Recife", "Teresina", "Rio de Janeiro", "Natal", "Porto Alegre", "Porto Velho", "Boa Vista", "Florianopolis", "Sao Paulo", "Aracaju", "Palmas"};
+       
+       int[] populations = {906876, 3365351, 877613, 4269995, 14985284, 9240580, 3094325, 213317639, 7206589,7153262, 3567234, 21411923, 8777124, 4059905, 213317639, 9674793, 3289290, 17463349, 3560903, 11466630, 1815278, 652713, 7338473, 46649132, 2338474, 1607363};
+       
+        int[] gpd = {16476, 63202, 18469, 116019, 305321, 166915, 265847, 138446, 224126, 106916, 178650, 122628, 682786, 215936,70292, 487931, 193307, 56391, 753824, 71577, 470942, 51599, 16024, 349275, 2377639, 45410, 43650};
+       
+       Scanner scan = new Scanner(System.in);
+       String userState;
+       
+       System.out.println("Choose a state: ");
+       userState = scan.nextLine();
+       int index = Arrays.asList(states).indexOf(userState);
+       
+       if(index == -1){
+           System.out.println("Invalid State");
+       }else{
+           System.out.println("Capital: " + capitals[index]);
+           System.out.println("Population: " + populations[index]);
+           System.out.println("Gross Domestic Product (GPD): " + gpd[index] + " bi R$");
+       }
+     
+       
+    }
+}
