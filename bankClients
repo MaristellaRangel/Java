@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int choice;
+        float price;
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter the price: ");
+        price = scan.nextFloat();
+        System.out.println("Choose an option\n1 - Unregistered customer\n2 - Silver Customer\n3 - Gold Customer\n4 - Premium Customer");
+        choice = scan.nextInt();
+
+        switch (choice){
+            case 1:
+                System.out.println("Unregistered customers doesn´t have discount");
+                System.out.println("Price: " + price + "R$");
+                break;
+            case 2:
+                System.out.println("5% discount!");
+                System.out.println("Price: " + (0.95 * price) + "R$");
+                break;
+            case 3:
+                System.out.println("10% discount!");
+                System.out.println("Price: " + (0.90 * price) + "R$");
+                break;
+            case 4:
+                System.out.println("15% discount!");
+                System.out.println("Price: " + (0.85 * price) + "R$");
+                break;
+            default:
+                System.out.println("Invalid option");
+        }
+    }
+}
