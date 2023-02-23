@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        float grade=0, average ;
+        Scanner scan = new Scanner(System.in);
+        for(int n = 0; n < 3; n++){
+            System.out.println("Enter the " + (n+1) + "ª grade");
+            grade += scan.nextFloat();
+        }
+        average  = grade / 3;
+        System.out.printf("Your average is %.2f", average);
+        if (average  < 5){
+            System.out.println("\nYou didn´t pass!");
+        }else{
+            System.out.println("\nYou passed!");
+        }
+    }
+}
