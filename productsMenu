@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int option, quantity, index;
+        char answer;
+        String[] productNames = {"Blush", "Eyebrow Gel","Shadow palette", "Mascara", "Eyeliner"};
+        float[] productPrices = {4.0f, 6.0f, 5.0f, 4.50f, 6.0f};
+
+        System.out.println("MENU : Makeup Products");
+        System.out.println("1 - Blush U$4.00\n2 - Eyebrow Gel U$6.00\n3 - Shadow palette U$5.00\n4 - Mascara U$4.50\n5 - Eyeliner U$6.00\n");
+        do{
+            System.out.println("Choose an option: ");
+            option = scan.nextInt();
+            if (option < 1 || option > 5){
+                System.out.println("Invalid option!");
+           }else{
+                    index = option - 1;
+                    System.out.println("Quantity: ");
+                    quantity = scan.nextInt();
+                    System.out.println("Product Name: " + productNames[index]);
+                    System.out.println("Quantity: " + quantity);
+                    System.out.println("Total Price: " + productPrices[index] * quantity);
+                }
+            System.out.println("Do you want to continue? (y)");
+            answer = scan.next().toLowerCase().charAt(0);
+        }while(answer == 'y');
+
+    }
+}
