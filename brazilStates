@@ -22,8 +22,8 @@ class Main {
            System.out.println("Invalid State");
        }else{
            System.out.println("Capital: " + capitals[index]);
-           System.out.println("Population: " + populations[index]);
-           System.out.println("Gross Domestic Product (GDP): " + gdp[index] + " bi R$");
+           System.out.println("\nPopulation: " + populations[index]);
+           System.out.println("\nGross Domestic Product (GDP): " + gdp[index] + " bi R$");
        }
      
        
