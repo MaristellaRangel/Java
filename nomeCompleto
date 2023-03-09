@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Nome completo: ");
+        String nomeCompleto = scan.nextLine();
+
+        int qtdLetrasPrimeiroNome = 0;
+        for(int i = 0; i < nomeCompleto.length(); i++){
+            if(nomeCompleto.charAt(i) != ' '){
+                qtdLetrasPrimeiroNome += 1;
+            }else{
+                break;
+            }
+        }
+
+        char[] letras = new char[qtdLetrasPrimeiroNome];
+        System.out.println("Letras do primeiro nome: ");
+        for(int i = 0; i < qtdLetrasPrimeiroNome; i++){
+            letras[i] = nomeCompleto.charAt(i);
+            System.out.println(letras[i]);
+        }
+        String sobrenome = "";
+        for(int i = 0; i < nomeCompleto.length() - qtdLetrasPrimeiroNome; i++){
+            sobrenome += nomeCompleto.charAt(qtdLetrasPrimeiroNome + i);
+        }
+        System.out.println("Sobrenome: " + sobrenome);
+
+    }
+}
