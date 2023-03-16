@@ -1,0 +1,61 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        //   1 - Escreva um programa que crie um vetor de inteiros e preencha com valores digitados pelo usuário. Em seguida, o programa deve dividir o vetor em dois, um contendo os valores pares e outro contendo os valores ímpares. Por fim, o programa deve exibir os dois vetores resultantes.
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Quantos números deseja digitar ?");
+        int qtd_numeros = scan.nextInt();
+        int[] numeros = new int[qtd_numeros];
+        int qtd_pares = 0;
+        int qtd_impares = 0;
+
+        for(int cont = 0; cont < qtd_numeros; cont++){
+            System.out.print("Digite o " + (cont+1) + "º número: ");
+            int num = scan.nextInt();
+            if(verificarPar(num)){
+                qtd_pares += 1;
+            }else{
+                qtd_impares += 1;
+            }
+        }
+
+        int[] pares = new int[qtd_pares];
+        int[] impares = new int[qtd_impares];
+
+        int cont_pares = 0;
+        for(int c = 0; c < qtd_numeros; c++){
+            if(verificarPar(numeros[c])){
+                pares[cont_pares] = numeros[c];
+                cont_pares++;
+            }
+        }
+
+        int cont_impares = 0;
+        for (int c = 0; c < qtd_numeros; c++){
+            if(!verificarPar(numeros[c])){
+                pares[cont_impares] = numeros[c];
+                cont_impares++;
+            }
+        }
+
+        System.out.println("Pares: ");
+        mostrarVetor(qtd_pares, pares);
+
+        System.out.println("Ímpares: ");
+        mostrarVetor(qtd_impares, impares);
+    }
+    public static boolean verificarPar(int n){
+        if (n % 2 == 0){
+            return true;
+        }
+        return false;
+    }
+
+    public static void mostrarVetor(int qtd, int[] v){
+        for(int cont = 0; cont < qtd; cont++){
+            System.out.print(v[cont] + " ");
+        }
+    }
+}
