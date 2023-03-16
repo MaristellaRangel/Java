@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Quantos números deseja digitar? ");
+        int qtd_numeros = scan.nextInt();
+        int qtd_numeros_diferente_zero = 0;
+        int[] numeros = new int[qtd_numeros];
+
+        for (int cont = 0; cont < qtd_numeros; cont++){
+            System.out.print("Digite o " + (cont+1) + "° número: ");
+            numeros[cont] = scan.nextInt();
+        }
+
+        for (int num : numeros){
+            if (num != 0){
+                qtd_numeros_diferente_zero += 1;
+            }
+        }
+
+        int cont = 0;
+        int[] numeros_diferente_zero = new int[qtd_numeros_diferente_zero];
+        System.out.print("Números diferentes de zero: ");
+        for (int c = 0; c < qtd_numeros; c++){
+            int n =  numeros[c];
+            if( n != 0){
+                numeros_diferente_zero[cont] = n;
+                cont++;
+                System.out.print(n + " ");
+            }
+
+        }
+
+    }
+
+}
