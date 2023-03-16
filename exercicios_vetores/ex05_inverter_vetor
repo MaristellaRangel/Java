@@ -1,0 +1,37 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Random random = new Random();
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Quantos valores deseja digitar? ");
+        int qtd_valores = scan.nextInt();
+
+        int[] numeros = new int[qtd_valores];
+        int[] numeros_ordem_inversa = new int[qtd_valores];
+
+        for(int cont = 0; cont < qtd_valores; cont++){
+            numeros[cont] = random.nextInt(101);
+        }
+
+        int indice = qtd_valores - 1;
+        for(int c = 0; c < qtd_valores; c++){
+            numeros_ordem_inversa[c] = numeros[indice];
+            indice--;
+        }
+
+        System.out.println("Vetor de números aleatórios");
+        mostrarVetor(qtd_valores, numeros);
+
+        System.out.println("\nVetor na ordem inversa");
+        mostrarVetor(qtd_valores, numeros_ordem_inversa);
+    }
+
+    public static void mostrarVetor(int qtd, int[] v){
+        for(int cont = 0; cont < qtd; cont++){
+            System.out.print(v[cont] + " ");
+        }
+    }
+}
