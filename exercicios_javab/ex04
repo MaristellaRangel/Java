@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        float peso, altura, imc;
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Digite um número? ");
+        float num = scan.nextFloat();
+        float num_quadrado = (float) Math.pow(num, 2);
+        float num_cubo = (float) Math.pow(num, 3);
+
+        System.out.println("O quadrado de " + num + " é " + num_quadrado);
+        System.out.println("O cubo de " + num + " é " + num_cubo);
+
+    }
+}
