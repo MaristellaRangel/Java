@@ -1,6 +1,9 @@
+package bosch;
+
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
@@ -13,7 +16,7 @@ public class Main {
             System.out.print("Digite o " + (cont+1) + "° número: ");
             int num = scan.nextInt();
             numeros[cont] = num;
-            if (num != 0){
+            if (verificarNumeroDiferenteZero(num)){
                 qtd_numeros_diferente_zero += 1;
             }
         }
@@ -23,14 +26,18 @@ public class Main {
         System.out.print("Números diferentes de zero: ");
         for (int c = 0; c < qtd_numeros; c++){
             int n =  numeros[c];
-            if( n != 0){
+            if(verificarNumeroDiferenteZero(n)){
                 numeros_diferente_zero[cont] = n;
                 cont++;
                 System.out.print(n + " ");
             }
 
         }
-
     }
-
+    public static boolean verificarNumeroDiferenteZero(int num){
+        if (num != 0){
+            return true;
+        }
+        return false;
+    }
 }
