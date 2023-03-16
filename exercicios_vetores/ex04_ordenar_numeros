@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Quantos números deseja digitar? ");
+        int qtd_numeros = scan.nextInt();
+
+        int[] numeros = new int[qtd_numeros];
+        for(int cont = 0; cont < qtd_numeros; cont++){
+            System.out.print("Digite o " + (cont+1) + "º número: ");
+            numeros[cont] = scan.nextInt();
+        }
+
+        for (int c = 0; c < qtd_numeros; c++){
+            for (int i = c+1; i < qtd_numeros; i++){
+                if (numeros[c] > numeros[i]){
+                    int guardado = numeros[c];
+                    numeros[c] = numeros[i];
+                    numeros[i] = guardado;
+                }
+            }
+        }
+
+        for(int cont = 0; cont < qtd_numeros; cont++){
+            System.out.print(numeros[cont] + " ");
+        }
+
+    }
+}
