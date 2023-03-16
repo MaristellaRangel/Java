@@ -1,0 +1,31 @@
+package bosch;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Formato: ax² + bx + c = 0");
+        System.out.print("Ceficiente a: ");
+        int a = scan.nextInt();
+
+        System.out.print("Coeficiente b: ");
+        int b = scan.nextInt();
+
+        System.out.print("Coeficiente c: ");
+        int c = scan.nextInt();
+
+        int delta = (int) (Math.pow(b,2) - (4 * a * c));
+
+        System.out.println("Delta: " + delta);
+        if(delta < 0){
+            System.out.println("Equação sem raíz");
+        }else{
+            int x1 = (int) ((-b + Math.sqrt(delta)) / (2 * a));
+            int x2 = (int) ((-b - Math.sqrt(delta)) / (2 * a));
+            System.out.println("x1: " + x1);
+            System.out.println("x2: " + x2);
+        }
+        }
+    }
