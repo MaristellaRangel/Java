@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Digite a temperatura em ºF: ");
+        float fahrenheit = scan.nextFloat();
+        double celsius = (fahrenheit - 32) / 1.8;
+        System.out.printf("A temeperatura em °C é %.2f",celsius);
+    }
+}
