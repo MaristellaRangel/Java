@@ -1,0 +1,12 @@
+package bosch;
+
+public class Main {
+    public static void main(String[] args) {
+        double termo1 =  3 * Math.pow(-3.0/4,-2);
+        double termo2 = 6 * (Math.pow(3,-1) / 4) ;
+        double termo3 = 7 * Math.pow(-3.0/4, -1) + 2;
+        double juncao = (termo1 + termo2 - 4)  / termo3;
+        double resultado = Math.pow(juncao, -1) + 4;
+        System.out.println("O resultado é " + resultado);
+    }
+}
