@@ -14,13 +14,18 @@ public class Main {
         }
 
         int maior = numeros_aleatorios[0];
+        int menor = numeros_aleatorios[0];
         for (int num : numeros_aleatorios){
             System.out.print(num + " ");
             if (num > maior){
                 maior = num;
             }
+            if (num < menor){
+                menor = num;
+            }
         }
 
         System.out.println("\nO maior número é " + maior);
+        System.out.println("O menor número é " + menor);
     }
 }
