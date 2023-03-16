@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Quantos números deseja armazenar? ");
+        float soma = 0;
+        int qtd_numeros = scan.nextInt();
+        int[] numeros = new int[qtd_numeros];
+
+        for(int cont = 0; cont < qtd_numeros; cont++){
+            System.out.print("Digite o " + (cont+1) + "º número: ");
+            numeros[cont] = scan.nextInt();
+            soma += numeros[cont];
+        }
+        float media = soma / qtd_numeros;
+        System.out.printf("A média dos números é " + media);
+    }
+}
