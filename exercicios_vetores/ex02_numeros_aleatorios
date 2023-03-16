@@ -1,0 +1,26 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        Random random = new Random();
+        System.out.print("Quantos números deseja gerar? ");
+        int qtd_numeros = scan.nextInt();
+        int[] numeros_aleatorios = new int[qtd_numeros];
+        for(int cont = 0; cont < qtd_numeros; cont++){
+            // gera um número aleatório de 0 a 100
+            numeros_aleatorios[cont] = random.nextInt(101);
+        }
+
+        int maior = numeros_aleatorios[0];
+        for (int num : numeros_aleatorios){
+            System.out.print(num + " ");
+            if (num > maior){
+                maior = num;
+            }
+        }
+
+        System.out.println("\nO maior número é " + maior);
+    }
+}
