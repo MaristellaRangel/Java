@@ -11,10 +11,8 @@ public class Main {
 
         for (int cont = 0; cont < qtd_numeros; cont++){
             System.out.print("Digite o " + (cont+1) + "° número: ");
-            numeros[cont] = scan.nextInt();
-        }
-
-        for (int num : numeros){
+            int num = scan.nextInt();
+            numeros[cont] = num;
             if (num != 0){
                 qtd_numeros_diferente_zero += 1;
             }
