@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+       Scanner scan = new Scanner(System.in);
+       System.out.print("Base do triângulo (cm): ");
+       float base = scan.nextFloat();
+       System.out.print("Altura do triângulo (cm): ");
+       float altura = scan.nextFloat();
+       float area = (base * altura) / 2;
+       System.out.println("A área do triângulo é " + area + " cm²");
+    }
+}
